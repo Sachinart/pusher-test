@@ -85,6 +85,10 @@ VERSIONS = %w{1.1 1.2 1.2.1 1.3 1.4 1.4.1 1.4.2 1.4.3 1.5.0 1.5.1
   7.0.0
 }
 
+before do
+  redirect request.url.sub('http', 'https') unless request.secure? || ENV["RACK_ENV"] != "production"
+end
+
 get '/favicon.ico' do
   status 404
   return '404'
