@@ -28,8 +28,11 @@ PLATFORMS
 
 DEPENDENCIES
   pusher
-  shotgun (>= 0.9.1)
-  sinatra (>= 2.0.0)
+  shotgun
+  sinatra
+
+RUBY VERSION
+   ruby 2.5.7p206
 
 BUNDLED WITH
    1.12.3
