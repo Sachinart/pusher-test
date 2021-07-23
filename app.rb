@@ -137,11 +137,6 @@ post '/pusher/auth' do
     .to_json
 end
 
-# Legacy route
-get(/^\/(\d+\.\d+(\.\d+[-pre]*)?)\/?$/) do |version, _|
-  redirect "/?version=#{version}"
-end
-
 helpers do
   def pusher_env
     Environment.new(params[:env] || "mt1")
