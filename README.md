@@ -37,4 +37,5 @@ git push heroku master
 2. Create an app within the cluster
     1. `heroku run rails console --app global-production`
     2. `Account.where(email: "services+pushertest@pusher.com").first.apps.create(name: "test.pusher.com <cluster name>", cluster_id: <cluster ID>, ssl_only: false, client_events: true, batch_webhooks: true, counting: false)`
+    3. `Account.where(email: "services+pushertest@pusher.com").first.apps.where(cluster_id: <cluster ID>).first.tokens`
 3. Modify the `CONFIG_JSON` environment variable in Heroku with the details for the new cluster and app
