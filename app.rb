@@ -1,6 +1,6 @@
 require 'pusher'
 require 'sinatra'
-require 'version'
+require './version'
 require 'yaml'
 require 'json'
 

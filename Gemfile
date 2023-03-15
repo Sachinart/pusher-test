@@ -1,10 +1,7 @@
 source "https://rubygems.org"
 
-ruby "2.7.6"
+ruby "3.1.2"
 
 gem 'pusher'
 gem 'sinatra'
-
-group :development do
-  gem 'shotgun'
-end
+gem 'puma'
