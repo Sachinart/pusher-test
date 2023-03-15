@@ -32,7 +32,7 @@ class Environment
   end
 
   def self.list_public
-    public_clusters = [:mt1, :us2, :us3, :eu, :ap1, :ap2, :ap3, :sa1]
+    public_clusters = [:mt1, :us2, :us3, :eu, :ap1, :ap2, :ap3, :ap4, :sa1]
     CONFIG.keys.select { |k| public_clusters.include?(k) }
   end
 
@@ -59,7 +59,8 @@ class Environment
   end
 
   def client
-    @client ||= Pusher::Client.new(@config)
+    client_config = @config.merge({use_tls: false})
+    @client ||= Pusher::Client.new(client_config)
   end
 
   def [](attribute)
@@ -82,7 +83,8 @@ VERSIONS = %w{1.1 1.2 1.2.1 1.3 1.4 1.4.1 1.4.2 1.4.3 1.5.0 1.5.1
   4.0.0 4.1.0 4.2.0 4.2.1 4.2.2 4.3.0 4.3.1 4.4.0
   5.0.0 5.0.1 5.0.2 5.1.0
   6.0.0 6.0.1 6.0.2 6.0.3
-  7.0.0 7.0.6 7.4.0
+  7.0.0 7.0.6 7.4.0 7.4.1
+  8.0.0 8.0.1
 }
 
 before do
