@@ -14,7 +14,7 @@ Install the bundle if required
 
 and run
 
-    bundle exec shotgun
+    ruby app.rb
 
 Then visit <http://localhost:9393/>.
 
