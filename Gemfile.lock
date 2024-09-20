@@ -5,8 +5,8 @@ GEM
     multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
-    nio4r (2.5.8)
-    puma (6.1.1)
+    nio4r (2.7.3)
+    puma (6.4.3)
       nio4r (~> 2.0)
     pusher (2.0.3)
       httpclient (~> 2.8)
@@ -28,7 +28,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  puma
+  puma (>= 6.4.3)
   pusher
   sinatra
 
@@ -36,4 +36,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.24
+   2.3.26
